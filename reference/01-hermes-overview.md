@@ -28,7 +28,7 @@ with a design center that is different in four ways that matter for this hub.
 
 ## Surfaces (the same agent core, many front doors)
 
-- **CLI / TUI** — `hermes` (interactive), `hermes chat -q "..."` (one-shot)
+- **CLI / TUI** — `hermes` (interactive), `hermes --oneshot "..."` (one-shot)
 - **Native desktop app** — `hermes desktop` (alias `hermes gui`)
 - **Web dashboard** — `hermes dashboard` (admin panel + embedded chat)
 - **Gateway** — `hermes gateway run` (messaging platforms)
@@ -70,4 +70,4 @@ The "Hermes Agent Master Class" article series by Tony Simons on X is a real, re
 resource (the public card confirms *"Part 9: Browser and Computer Use"*), but the article
 body is behind an X login wall and was **not** readable when this hub was built. This hub
 therefore does **not** reproduce or paraphrase its contents. Treat it as a recommended
-external read, not a source this hub is derived from. See `case-studies/03-master-class-series.md`.
+external read, not a source this hub is derived from. See `../case-studies/03-master-class-series-study-guide.md`.

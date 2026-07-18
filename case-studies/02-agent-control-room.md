@@ -74,6 +74,10 @@ Hermes's built-in **kanban** (`../reference/09-...`) is the native equivalent.
 = bot "Hermes SEO". Recommended: `hermes-orchestrator, hermes-life, hermes-seo, hermes-dev,
 hermes-cmo, hermes-ops, hermes-finance`. Avoid `main, agent1, bot, assistant, test`.
 
+These hyphenated names are Control Room slugs. If the specialist is implemented as a Hermes
+profile rather than a container, use the CLI's lowercase-alphanumeric profile namespace, for
+example `cmo` or `hermescmo` for the `hermes-cmo` slug.
+
 ## Bundled skills in the source repo
 
 `create-vps`, `setup-control-room`, `agent-control-room`, `agent-task-router`,

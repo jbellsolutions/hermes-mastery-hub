@@ -48,4 +48,4 @@ You become one by running real workflows so the agent accumulates memory + skill
 
 Because memory should stay compact, the coach keeps a human-readable **learning log** with
 you — a running note of what was built, what worked, what to build next. See
-`agent-feed/HERMES_COACH_PROMPT.md`. Treat it as the changelog of your growing agent OS.
+`../agent-feed/HERMES_COACH_PROMPT.md`. Treat it as the changelog of your growing agent OS.

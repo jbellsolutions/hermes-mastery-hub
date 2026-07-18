@@ -6,7 +6,7 @@ These are the habits that separate a person who *has* Hermes from a person who *
 
 ## 1. Draft → approve → execute (the trust pattern)
 
-The single most important pattern in the whole hub, straight from the prize-winning Mom-n-Pop
+The single most important pattern in the whole hub, straight from the Mom-n-Pop hackathon
 build: **the agent drafts and proposes; the human approves; then the agent executes.** Nothing
 with a real-world side effect (send email, charge a card, publish, deploy, delete) happens
 without an explicit yes. Their words: *"This isn't a limitation. It's the product."* Keep
@@ -49,8 +49,8 @@ values. MCP stdio servers only receive the env vars you explicitly pass.
 
 ## 8. Keep skills sharp
 
-If a skill is wrong, stale, or missing a pitfall you just hit — patch it immediately
-(`skill_manage(action='patch')` / `hermes` skill tooling). Let the Curator archive idle ones.
+If a skill is wrong, stale, or missing a pitfall you just hit, edit its `SKILL.md`, run
+`/reload-skills`, and retest its trigger. Let the Curator archive idle agent-created skills.
 Pin the skills you never want auto-touched.
 
 ## 9. Verify before you claim "done"

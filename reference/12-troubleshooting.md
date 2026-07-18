@@ -31,7 +31,7 @@ hermes --ignore-rules    # clean-room session: is it your setup or Hermes itself
 ## Skills not showing
 
 `hermes skills list` (installed?) → `hermes skills config` (platform-enabled?) → load
-explicitly `/skill name` or `hermes -s name` → `/reload-skills` after adding files manually.
+explicitly `/skill name` or `hermes --skills name` → `/reload-skills` after adding files manually.
 
 ## Gateway
 

@@ -1,8 +1,11 @@
 # SOURCES
 
-Every claim in this hub traces to one of the sources below. Provenance is separated by type
-so you can weigh confidence correctly. **Nothing here is asserted that isn't grounded in one
-of these.**
+Hermes feature, CLI, and source-repository claims in this hub trace to the sources below.
+Course sequencing, templates, role cards, personal use cases, assessments, examples, and
+recommendations are original hub-authored synthesis informed by those sources—not direct
+claims copied from them. Provenance is separated by type so you can weigh confidence correctly.
+
+For exact repository revisions and the observed build environment, see [`SOURCE_LOCK.md`](SOURCE_LOCK.md).
 
 ## A. Official Nous Research (highest authority)
 

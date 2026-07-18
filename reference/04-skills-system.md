@@ -83,7 +83,7 @@ Every strong SKILL.md in the source repos shares this shape:
 - **Verification Checklist** — checkboxes proving it works.
 - **One-Shot Recipes** — copy-paste starting points.
 
-Use `templates/SKILL.md` in this hub as the canonical starting point. See
+Use `../templates/SKILL.md` in this hub as the canonical starting point. See
 `software-development/hermes-agent-skill-authoring` (installed skill) for the in-repo validator
 and writing-quality principles.
 
@@ -91,5 +91,5 @@ and writing-quality principles.
 
 This is the payoff. Each file in `business-roles/` ends with "convert this into a Hermes
 skill" instructions: take the role's mission + allowed/forbidden work + approval gates +
-example prompts, drop them into `templates/SKILL.md`, save under
+example prompts, drop them into `../templates/SKILL.md`, save under
 `~/.hermes/skills/business/<role>/SKILL.md`, and `/reload-skills`. Now the agent *is* that role.

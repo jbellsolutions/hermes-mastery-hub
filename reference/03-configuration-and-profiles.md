@@ -41,8 +41,10 @@ hermes -p acme                             # run one session under a profile
 hermes profile export acme                 # tar.gz for backup/migration
 ```
 
-This is the mechanism behind the multi-agent Control Room: `hermes-ops`, `hermes-cmo`,
-`hermes-dev` etc. can each be a profile (single box) or a full container (see `10-...`).
+This is the mechanism behind a lightweight multi-agent Control Room. **Hermes profile names
+must be lowercase alphanumeric** on the observed CLI, so use names such as `ops`, `cmo`, or
+`hermesdev`. Hyphenated names such as `hermes-cmo` are Control Room agent/container/doc slugs,
+not valid profile CLI names. See `10-multi-agent-control-room.md`.
 
 ## Security toggles that matter for a business agent
 

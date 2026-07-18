@@ -1,7 +1,9 @@
 # 00 — Ground Truth & Source Discipline
 
 > **Read this first.** This file is the anti-hallucination contract for the entire hub.
-> Every claim in every other file traces back to a verified source listed in `../SOURCES.md`.
+> Hermes feature, CLI, and source-repository claims trace to `../SOURCES.md`. Course structure,
+> templates, role cards, personal use cases, assessments, examples, and recommendations are
+> original synthesis labeled as guidance rather than source facts.
 
 ## The rule
 
@@ -10,11 +12,11 @@ does not assert it. When something is uncertain, it is labeled **UNVERIFIED** an
 told how to check it yourself (`hermes --help`, `hermes <cmd> --help`, the official docs,
 or the source tree at `github.com/NousResearch/hermes-agent`).
 
-This matters because the AI ecosystem is full of confident-sounding fabrication. When this
-hub was built, draft material floating around invented product names ("OpenAGI", "TEN",
-"Nous-PSY"), invented skill file formats (TOML/JSON/Python packages), and invented feature
-sets. **None of that is real.** Feeding fabricated facts to your agent produces failures
-that are painful to debug, because the agent will confidently act on a false premise.
+This matters because the AI ecosystem is full of confident-sounding fabrication. During this
+build, unverified draft material used names such as "OpenAGI", "TEN", and "Nous-PSY", plus
+unsupported skill formats (TOML/JSON/Python packages). Those names and formats were **not
+verified as Hermes features and were not used as sources for this hub**. Feeding unverified
+claims to your agent creates painful failures because it may confidently act on a false premise.
 
 ## What IS verified (and used throughout this hub)
 

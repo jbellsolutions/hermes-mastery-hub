@@ -35,6 +35,7 @@ lives anywhere (local/Docker/SSH/Modal/Daytona), reacts via **webhooks**, runs u
 | 10-multi-agent-control-room | Level 1→4, task bus, naming, control-plane vs runtime |
 | 11-best-practices | the operating doctrine |
 | 12-troubleshooting | doctor-first, gateway, business pitfalls, Windows |
+| 13-community-discovery-and-curation | Skills Hub/community discovery + safe curation rubric |
 
 ## Business roles (`../business-roles/`)
 
@@ -43,6 +44,12 @@ customer-success · finance-ops · research-analyst · automation-engineer ·
 founder-chief-of-staff · orchestrator. Each card: mission, allowed/forbidden, approval gates,
 required integrations (honest), example prompts, first workflow, convert-to-skill, KPIs,
 failure modes.
+
+## Personal use cases (`../personal-use-cases/`)
+
+personal-chief-of-staff · life-admin · personal-inbox · learning-coach · travel-planner ·
+home-and-family · personal-finance-review. Every external message, booking, purchase, deletion,
+or disclosure remains approval-gated.
 
 ## Course (`../course/`)
 

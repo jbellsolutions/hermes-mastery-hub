@@ -60,6 +60,10 @@ Docs: agents/hermes-seo  Keys: hermes-seo:<purpose>   Bot: Hermes SEO
 Recommended base names: `hermes-orchestrator, hermes-life, hermes-seo, hermes-dev,
 hermes-cmo, hermes-ops, hermes-finance`. Avoid `main, agent1, bot, assistant, test`.
 
+Those are **Control Room slugs** for containers, data directories, docs, and bot labels.
+Hermes **profile names are a separate namespace** and the observed CLI requires lowercase
+alphanumeric names, so map `hermes-cmo` → profile `cmo` or `hermescmo`.
+
 ## Bundled skills in the source repo
 
 `create-vps`, `setup-control-room`, `agent-control-room`, `agent-task-router`,

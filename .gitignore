@@ -12,6 +12,11 @@ __pycache__/
 venv/
 # secrets — never commit
 .env
+.env.*
+!.env.example
 *.key
+*.pem
+*.p12
+*.crt
 *_secret*
 auth.json

@@ -9,8 +9,9 @@ June 2026. This is the strongest, most complete case study in the hub — study 
 
 A small service business was run **end-to-end through Telegram** by a Hermes agent — real
 leads, real estimates, real Stripe charges, real marketing — with the owner approving every
-action by tapping "yes." It shipped in ~11 days and won a hackathon prize. The reason it's
-worth 10x-ing: it is the cleanest working proof of the **draft → approve → execute** pattern.
+action by tapping "yes." The source repository says it shipped in 11 days during the
+hackathon; the user described it as prize-winning, but that award claim was not independently
+verified during this research. It remains a strong proof of **draft → approve → execute**.
 
 ## The problem it solved
 
