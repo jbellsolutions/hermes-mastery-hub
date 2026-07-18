@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+# editor
+*.swp
+*~
+.idea/
+.vscode/
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# secrets — never commit
+.env
+*.key
+*_secret*
+auth.json
