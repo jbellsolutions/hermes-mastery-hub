@@ -8,8 +8,7 @@ beginner to a top-tier operator.
 ## The one-command way to use this
 
 ```bash
-# authenticate, then clone this private repo into your skills directory
-gh auth login
+# clone the public hub into your skills directory
 mkdir -p ~/.hermes/skills
 git clone https://github.com/jbellsolutions/hermes-mastery-hub.git \
   ~/.hermes/skills/hermes-mastery-hub
@@ -17,8 +16,8 @@ hermes --skills hermes-mastery-hub
 ```
 Then say: **"Be my Hermes coach. Start the weekend bootcamp."**
 
-This is a private repository, so the GitHub account used for cloning needs access. If the
-repository is already on your machine, copy it into `~/.hermes/skills/hermes-mastery-hub`.
+If the repository is already on your machine, copy it into
+`~/.hermes/skills/hermes-mastery-hub`.
 
 Or, in any Hermes session: **"Load the hermes-mastery-hub skill and walk me through it step by step."**
 

@@ -20,9 +20,10 @@ load-bearing.
 ## Friday night — Foundation (≈1–2 hrs)
 **Module:** `module-01-setup.md`
 - Install Hermes, run `hermes doctor`, pick a model (`hermes model` or `hermes setup --portal`).
-- After GitHub authentication, clone the private hub into
-  `~/.hermes/skills/hermes-mastery-hub`, then run `hermes --skills hermes-mastery-hub`.
-  If you already have a local checkout, copy it into that skill directory instead.
+- Clone the public hub:
+  `git clone https://github.com/jbellsolutions/hermes-mastery-hub.git ~/.hermes/skills/hermes-mastery-hub`.
+  Then run `hermes --skills hermes-mastery-hub`. If you already have a local checkout, copy it
+  into that skill directory instead.
 - Say: **"Be my Hermes coach. Start the weekend bootcamp."**
 - **Artifact:** a working agent that can run a terminal command + a web search.
 - **Checkpoint:** `hermes doctor` is green; the coach has confirmed your setup.

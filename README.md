@@ -10,8 +10,7 @@ agent* so it can coach you from beginner to top-tier operator.
 ## Quick start
 
 ```bash
-# 1. authenticate with GitHub, then clone this private repo into your skill directory
-gh auth login
+# 1. clone the public hub into your skill directory
 mkdir -p ~/.hermes/skills
 git clone https://github.com/jbellsolutions/hermes-mastery-hub.git \
   ~/.hermes/skills/hermes-mastery-hub
@@ -21,10 +20,8 @@ hermes --skills hermes-mastery-hub
 ```
 Then say: **"Be my Hermes coach. Start the weekend bootcamp."**
 
-Because the repository is private, cloning requires GitHub access to `jbellsolutions/hermes-mastery-hub`.
 If you already have the repository locally, copy that directory into
-`~/.hermes/skills/hermes-mastery-hub` instead. A bare public-URL skill installer is not the
-recommended installation path for this private repository.
+`~/.hermes/skills/hermes-mastery-hub` instead.
 
 The skill instructs the agent to read `agent-feed/HERMES_COACH_PROMPT.md`, verify setup, and
 teach one step at a time while gating external side effects. Actual adherence depends on the

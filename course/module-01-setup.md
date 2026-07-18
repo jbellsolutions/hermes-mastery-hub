@@ -12,7 +12,7 @@ A working Hermes agent you can talk to, with a healthy config and a selected, au
 2. Fastest path to a capable agent: `hermes setup --portal` (one OAuth = model + web/image/TTS/browser). Or bring your own: `hermes model`.
 3. Run `hermes doctor` and resolve anything not green.
 4. Start a chat: `hermes`. Ask it to run `echo hello` in the terminal and to do one web search.
-5. Authenticate to GitHub, then clone this private repo into the skill directory:
+5. Clone the public hub into the skill directory:
    `git clone https://github.com/jbellsolutions/hermes-mastery-hub.git ~/.hermes/skills/hermes-mastery-hub`.
    If you already have a local checkout, copy it there instead. Start with
    `hermes --skills hermes-mastery-hub`.
