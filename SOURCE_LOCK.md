@@ -53,3 +53,20 @@ When refreshing the hub:
 2. Resolve each repository’s exact commit SHA.
 3. Re-run CLI-help, link, frontmatter, and secret validation.
 4. Add a new release note rather than silently rewriting the historical snapshot.
+
+---
+
+# Source Lock — v2.0.0 refresh snapshot
+
+- **Research/build timestamp (UTC):** `2026-10-12T22:45:00Z`
+- **Latest stable Hermes release:** `v0.21.7` (tag object `00f69310e29c24dfd7c6bb258b0a2337d3455d79`, commit `71d34bad1045610252eda02ee79549436896e784`)
+- **Previous stable:** `v0.21.6` (`f27cdbce5ab63eafe8633b293a75151409da5769`); last CalVer tag `v2026.9.24` (`e3dd27ee2d8b011737a4eea8e3eb3d711ab78690`)
+- **Docs/source read at:** `main` @ `ee36aed5adc737db49c94316ffeb97d3fb8dc099` (2026-10-12)
+- **Docs diff baseline:** tag `v2026.7.1`
+- **Method:** shallow clone of `NousResearch/hermes-agent`; `git diff v2026.7.1 HEAD -- website/docs`; defaults confirmed in
+  `hermes_cli/config_defaults.py`, `hermes_constants.py`, `hermes_cli/subcommands/*.py`; release pages for every tag
+  from `v2026.7.7` to `v0.21.7` read on github.com.
+- **Not verified:** a local `hermes --version` run (no Hermes install on the build machine for this refresh), live
+  gateway behavior, Hermes Cloud pricing. Where `main` and the latest release could differ, `main` was read; check
+  `hermes <command> --help` on your install.
+- **Tag scheme note:** releases after `v2026.9.24` use `vX.Y.Z`; daily canaries use `vX.Y.Z+canary.<timestamp>`.

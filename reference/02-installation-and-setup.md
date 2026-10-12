@@ -14,12 +14,13 @@ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 iex (irm https://hermes-agent.nousresearch.com/install.ps1)
 ```
 
-**PyPI:**
-```bash
-pip install hermes-agent        # or: uv pip install hermes-agent
-```
+**Desktop app (macOS Apple Silicon / Windows 11):** signed DMG or MSIX from the website — bundles the CLI and the GUI.
+After a CLI-only install you can add it later with `hermes desktop`.
 
-**Desktop app (Windows/macOS):** download the Hermes Desktop installer from the website — it bundles the CLI and the GUI.
+**Docker:** `docker run -it --rm -v ~/.hermes:/opt/data nousresearch/hermes-agent setup` — see `16-deployment-playbook.md`.
+Also supported: Nix and the Termux APT package.
+
+> **Changed since v1.0 (v0.20.0):** the PyPI and Homebrew channels were retired. Node 26 is required.
 
 After install:
 ```bash
@@ -68,9 +69,20 @@ Profiles live under `~/.hermes/profiles/<name>/` with the same layout.
 > **Rule:** settings go in `config.yaml`, secrets go in `.env`. Never put API key *values*
 > in config.yaml, and never commit `.env` to git.
 
+## Updating (changed in v0.21.7)
+
+Source installs now follow **stable release tags** by default, not every commit on `main`.
+```bash
+hermes update --check            # preview
+hermes update --plan             # read-only inventory of every profile/gateway
+hermes update                    # pauses gateways, snapshots state, migrates config, restarts
+hermes update --set-channel main # opt back into every commit (not recommended for client agents)
+```
+Releases are tagged `vX.Y.Z` since October 2026 (previously `v2026.M.D`). Full details: `16-deployment-playbook.md`.
+
 ## Where it can run (terminal backends)
 
-`local` (default), `docker`, `ssh`, `singularity`, `modal`, `daytona`. For an always-on
+`local` (default), `docker`, `ssh`, `singularity`, `modal`, `daytona`, `vercel_sandbox`. For an always-on
 business agent, the common pattern is a cheap VPS (`ssh`/`local` on the box) or a serverless
 backend (`modal`/`daytona`) that hibernates when idle. See `10-multi-agent-control-room.md`
 and the real `hermes-remote-db` pattern for a VPS + local Mac split.

@@ -1,0 +1,17 @@
+# Shareable settings only. NO secrets here — they go in .env (see distribution.yaml env_requires).
+model:
+  default: <model-id>
+  provider: <provider>
+agent:
+  max_turns: 150              # current default is unlimited; cap unattended agents
+approvals:
+  mode: smart
+  deny:
+    - "git push --force*"
+    - "*curl*|*sh*"
+    - "dd if=* of=/dev/*"
+terminal:
+  cwd: ~/work                 # "." means the launch dir, not the profile dir
+  home_mode: profile          # keep git/gh/ssh identities separate per agent
+skills:
+  external_dirs: []           # e.g. [/shared/team-skills]

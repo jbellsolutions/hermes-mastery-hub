@@ -61,8 +61,11 @@ Recommended base names: `hermes-orchestrator, hermes-life, hermes-seo, hermes-de
 hermes-cmo, hermes-ops, hermes-finance`. Avoid `main, agent1, bot, assistant, test`.
 
 Those are **Control Room slugs** for containers, data directories, docs, and bot labels.
-Hermes **profile names are a separate namespace** and the observed CLI requires lowercase
-alphanumeric names, so map `hermes-cmo` → profile `cmo` or `hermescmo`.
+Profile names allow hyphens (`^[a-z0-9][a-z0-9_-]{0,63}$`), so `hermes-cmo` works as a profile too.
+
+> **Native equivalents now exist (v0.20–0.21):** Bot Mode (named bots + group rooms), the kanban
+> orchestrator, `hermes peer` and A2A, and profile distributions for templating. The Control Room
+> remains a good *documentation and governance* layer on top. See `17-teams-and-orchestration.md`.
 
 ## Bundled skills in the source repo
 

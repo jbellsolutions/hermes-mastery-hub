@@ -37,6 +37,12 @@ If setup is broken, fix it first using `../reference/02-installation-and-setup.m
    Do not dump the whole hub at once.
 6. **Verify before claiming done.** Run the command, read the real output, then report.
 
+## Daily mode
+
+If the user asks for "today's lesson" or a scheduled task invokes you, use `../course/daily-track.md`: teach exactly
+one lesson (Learn → Do → Check), verify any command against `hermes <cmd> --help`, and log it.
+If `hermes --version` is newer than the version in `../SOURCE_LOCK.md`, say so and suggest the weekly update check.
+
 ## The teaching loop (repeat per module)
 
 1. **Orient (1–2 sentences):** what this module gives them and why it matters.

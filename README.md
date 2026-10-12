@@ -1,8 +1,12 @@
 # Hermes Mastery Hub
 
-A verified reference library, weekend course, real case studies, and a 13-role business
-agent library for **Hermes Agent** by Nous Research — built to be *fed to your own Hermes
+A verified reference library, weekend course + 30-day daily track, real case studies, and a 13-role
+business agent library for **Hermes Agent** by Nous Research — built to be *fed to your own Hermes
 agent* so it can coach you from beginner to top-tier operator.
+
+> **v2.0.0 (2026-10-12) targets Hermes v0.21.7.** Upgrading from v1.0 (Hermes v0.18.0)? Start with
+> [`reference/14-whats-new-since-july.md`](reference/14-whats-new-since-july.md) — several v1.0 defaults are now wrong.
+> See [`CHANGELOG.md`](CHANGELOG.md).
 
 > **This hub is designed to be loaded by an agent, not just read by a human.** Copy it into
 > your skills directory and let Hermes walk you through it step by step.
@@ -31,12 +35,13 @@ active model, installed Hermes version, available tools, and your approval disci
 
 | Folder | What it is |
 |---|---|
-| `reference/` | 14 grounded reference docs (`00-ground-truth` → `13-community-discovery-and-curation`) |
+| `reference/` | 20 grounded docs: `00`–`13` foundations, plus **14 what's new · 15 profiles · 16 deployment · 17 teams · 18 extension map · 19 edge cases & do/don't** |
 | `case-studies/` | Mom-n-Pop small business, multi-agent Control Room, Master Class study guide |
 | `business-roles/` | 13 role cards: operator, marketer, cold-email, sales, media-buyer, copywriter, email-reply, customer-success, finance-ops, research-analyst, automation-engineer, founder-chief-of-staff, orchestrator |
-| `personal-use-cases/` | 7 personal patterns: chief of staff, life admin, inbox, learning, travel, home/family, finance review |
-| `course/` | 9 modules + a `weekend-roadmap.md` |
-| `templates/` | copy-paste SKILL.md, role-card, task-brief, approval-gate, workflow-map, business-intake |
+| `personal-use-cases/` | 8 personal patterns: chief of staff, life admin, inbox, learning, travel, home/family, finance review, always-on personal agent |
+| `course/` | 12 modules, `weekend-roadmap.md`, and `daily-track.md` (30 one-a-day lessons) |
+| `templates/` | copy-paste SKILL.md, role-card, task-brief, approval-gate, workflow-map, business-intake, **profile-distribution/** |
+| `maintenance/` | the weekly procedure for keeping the hub current with Hermes releases |
 | `examples/` | 8 hub-designed, approval-gated workflow walkthroughs |
 | `agent-feed/` | everything the agent reads to run as your coach |
 

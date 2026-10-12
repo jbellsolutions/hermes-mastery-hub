@@ -48,6 +48,11 @@ hermes skills tap add REPO    # add a GitHub repo as a skill source
 In-session: `/skill <name>` loads one; `/skills` searches/installs; `/reload-skills`
 re-scans `~/.hermes/skills/` after you add files.
 
+**New since v1.0:** `/learn <dir|url|notes>` writes a skill from material; chain up to 5 skills (`/a /b do X`);
+`hermes bundles` (one command loads several skills); `requires_apps:` frontmatter; project-local skills that load only
+after `hermes skills trust`; `skills.external_dirs` / `skills.create_dir` for a **shared team skill folder**; install-time
+security scans. Full map: `18-plugins-mcp-and-extension-map.md`.
+
 ## Installing a whole pack (how the case-study repos are used)
 
 ```bash
@@ -65,9 +70,10 @@ cp -r Mom-n-Pop-Skills/skills/* ~/.hermes/skills/productivity/
 4. Next time, that skill loads automatically and the agent is instantly better.
 
 The **Curator** maintains agent-created skills in the background: tracks usage, marks idle
-ones stale, archives (never deletes) stale ones, keeps a tar.gz backup. It only touches
-skills with `created_by: agent` provenance — your hand-authored and hub-installed skills are
-off-limits. CLI: `hermes curator <status|run|pin|unpin|archive|restore>`. Pin the skills you
+ones stale after **14 days**, archives (never deletes) after **30 days**, and logs every change to
+`.curator_ledger.jsonl` (`hermes curator rollback <id>` undoes one). It only touches skills with
+`created_by: agent` provenance (background review) — your hand-authored, `/learn`-made and hub-installed
+skills are off-limits unless you `hermes curator adopt` them. CLI: `hermes curator <status|run|pin|unpin|archive|restore>`. Pin the skills you
 never want auto-touched: `hermes curator pin <name>`.
 
 ## Anatomy of a great skill (learned from the verified examples)

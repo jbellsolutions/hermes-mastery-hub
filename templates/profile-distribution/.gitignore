@@ -1,0 +1,15 @@
+# Create this BEFORE `git init`. The installer refuses these paths, but git will happily commit them.
+.env
+.env.*
+!.env.EXAMPLE
+auth.json
+memories/
+sessions/
+state.db*
+logs/
+workspace/
+plans/
+home/
+local/
+*_cache/
+mcp-tokens/

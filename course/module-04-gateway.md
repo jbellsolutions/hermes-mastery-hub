@@ -11,8 +11,10 @@ Your agent runs on a messaging platform (Telegram recommended) and you can appro
 2. `hermes gateway setup` → choose Telegram → paste the token.
 3. Start it: `hermes gateway run` (or `hermes gateway install` for always-on).
 4. DM your bot. Send `/sethome` in the chat you'll use.
-5. Confirm approvals: set `hermes config set approvals.mode manual`, then ask the agent to do
-   something flagged risky and approve it with `/approve` in chat.
+5. Confirm approvals: the default is now `smart` (an aux-LLM reviews risky commands). For this
+   exercise set `hermes config set approvals.mode manual`, ask the agent to do something flagged
+   risky, and approve it with `/approve` in chat.
+   Also set an allowlist: `TELEGRAM_ALLOWED_USERS=<your id>` in `.env` (gateways are deny-all by default).
 6. (Optional) Send a voice memo to confirm transcription if STT is configured.
 
 ## Artifact
@@ -25,8 +27,9 @@ Your agent runs on a messaging platform (Telegram recommended) and you can appro
 - [ ] `/platforms` shows Telegram connected
 
 ## Coach notes
-Telegram is the lowest-friction platform and what the winning Mom-n-Pop build used. Keep
-`approvals.mode: manual` for any agent that spends money or sends messages. Gateway dies on
+Telegram is the lowest-friction platform; Slack is better for business (files, threads). Keep
+`approvals.mode: manual` (or `smart` plus `approvals.deny` rules) for any agent that spends money or
+sends messages. One gateway per machine now serves every profile — see `../reference/15-profiles-deep-dive.md`. Gateway dies on
 SSH logout? `sudo loginctl enable-linger $USER`.
 
 ## Next action

@@ -16,6 +16,20 @@ For exact repository revisions and the observed build environment, see [`SOURCE_
 - **Skills Hub** — https://hermes-agent.nousresearch.com/docs/skills
   Skills catalog surface (verified to exist; catalog loads dynamically).
 
+### Added for v2.0.0 (read at `main` @ ee36aed, 2026-10-12)
+
+- `website/docs/user-guide/`: profiles, multi-profile-gateways, profile-distributions, which-file-does-what,
+  managed-scope, multi-connection-desktop, bot-mode, docker, desktop, security, egress/*, secrets/*, messaging/a2a,
+  messaging/relay, messaging/slack, messaging/telegram, features/{kanban*, delegation, cron, goals, loops, heartbeat,
+  plugins, plugin-catalog, skills, curator, mcp, tool-search, hooks, credential-vault, computer-use, bot-screen}
+- `website/docs/getting-started/`: installation, updating; `developer-guide/`: plugins/*, multiplexing-gateway,
+  gateway-monitoring, stable-releases, state-db-recovery, middleware; `guides/`: secure-hermes-on-a-work-machine,
+  manage-hermes-cloud-with-mcp, delegation-patterns, troubleshooting-agent-quality
+- Source: `hermes_cli/config_defaults.py`, `hermes_constants.py`, `hermes_cli/subcommands/*.py`,
+  `hermes_cli/kanban_parser.py`, `hermes_cli/config_migrations.py`, `plugin-catalog/`
+- Release pages: https://github.com/NousResearch/hermes-agent/releases/tag/<tag> for v2026.7.7 … v0.21.7
+- Hermes Cloud: https://portal.nousresearch.com/cloud
+
 ## B. Locally-installed Hermes skill on the build machine (high, machine-specific)
 
 - **`hermes-agent` skill v2.3.0** (installed at build time; author "Hermes Agent + Teknium").

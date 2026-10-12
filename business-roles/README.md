@@ -28,6 +28,16 @@ the role into a real Hermes skill.
 | [founder-chief-of-staff](founder-chief-of-staff.md) | Weekly review, prioritization, coordinated plans | Low (synthesis across roles) |
 | [orchestrator](orchestrator.md) | Route tasks across a **team** of agents (Level 3+) | High (multi-agent setup) |
 
+## v2: promoting a role to an "employee" is now native
+
+Since Hermes v0.21, promoting a role card to its own agent is a few commands, not a container project:
+`hermes profile create <role>` → give it the role's SOUL and skills → its own bot token → it appears as a **Bot** and
+can take **kanban** cards from an orchestrator. Package it with `../templates/profile-distribution/` to install it
+again for the next client. See `../reference/15-profiles-deep-dive.md` and `../reference/17-teams-and-orchestration.md`.
+
+Add a **qa** profile early: an independent checker that reviews other agents' "done" work catches the failures
+self-review misses.
+
 ## Which role to build first (recommended order)
 
 1. **operator** — the foundation. Everything else plugs into it. Build this first, always.

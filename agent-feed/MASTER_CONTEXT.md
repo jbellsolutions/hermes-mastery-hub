@@ -7,8 +7,10 @@
 Open-source, self-improving AI agent by Nous Research. Runs in terminal, desktop app,
 messaging platforms (Telegram/Discord/Slack/…), and IDEs. Provider-agnostic (20+). Learns via
 **skills** (Markdown+YAML procedural memory), remembers via **memory** + **session search**,
-lives anywhere (local/Docker/SSH/Modal/Daytona), reacts via **webhooks**, runs unattended via
-**cron**, parallelizes via **delegation**, scales via **profiles** + **kanban** + Control Room.
+lives anywhere (local/Docker/SSH/Modal/Daytona/Hermes Cloud), reacts via **webhooks**, runs unattended via
+**cron**, parallelizes via **delegation**, scales via **profiles** (one multiplexed gateway per machine) +
+**Bot Mode** + **kanban**, talks across machines via **`hermes peer`**/**A2A**, extends via **skills → MCP → plugins**.
+Hub v2.0 targets Hermes **v0.21.7** (2026-10-12).
 
 ## The five doctrines (everything reduces to these)
 
@@ -36,6 +38,12 @@ lives anywhere (local/Docker/SSH/Modal/Daytona), reacts via **webhooks**, runs u
 | 11-best-practices | the operating doctrine |
 | 12-troubleshooting | doctor-first, gateway, business pitfalls, Windows |
 | 13-community-discovery-and-curation | Skills Hub/community discovery + safe curation rubric |
+| 14-whats-new-since-july | **v0.18 → v0.21.7 changes, wrong-now defaults, breaking config** — read first |
+| 15-profiles-deep-dive | profiles, multiplexed gateway, distributions (templating), cross-machine |
+| 16-deployment-playbook | laptop/VPS/Docker/cloud computer/Cloud/enterprise; updates; security; ops |
+| 17-teams-and-orchestration | delegation, kanban, Bot Mode, peer, A2A; the "pod" blueprint |
+| 18-plugins-mcp-and-extension-map | skill vs MCP vs plugin vs hook; catalog; tool search |
+| 19-edge-cases-dos-and-donts | do/don't lists and a symptom → cause → fix table |
 
 ## Business roles (`../business-roles/`)
 
@@ -54,7 +62,8 @@ or disclosure remains approval-gated.
 ## Course (`../course/`)
 
 `weekend-roadmap.md` + modules 01–09: setup → skills → memory → gateway → business workflows →
-roles → webhooks/cron/mcp → control room → capstone.
+roles → webhooks/cron/mcp → control room → capstone. v2 adds modules 10 (profiles & deployment),
+11 (teams), 12 (security & ops) and `daily-track.md` — a 30-lesson, one-per-day path.
 
 ## Case studies (`../case-studies/`)
 

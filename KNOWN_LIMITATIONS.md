@@ -31,6 +31,11 @@ A skill supplies context and operating instructions. It is not deterministic con
 
 ## Version drift
 
+**v2.0.0 targets Hermes v0.21.7 (2026-10-12).** It was researched from the upstream source and docs rather than a
+local install, so run `hermes <command> --help` before relying on a flag. `maintenance/WEEKLY_UPDATE_CHECK.md` is the
+procedure for keeping this current.
+
+
 Hermes changes quickly. Commands and configuration may differ in later releases. Run `hermes <command> --help` and consult the live official docs when a command differs. Live documentation is intentionally unpinned.
 
 ## Source limitations

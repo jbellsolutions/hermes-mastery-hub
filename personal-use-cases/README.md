@@ -1,6 +1,6 @@
 # Personal Use Cases — your Hermes life OS
 
-These seven use-case cards apply the same discipline as the business roles: honest integration requirements, minimal access, and **draft → approve → execute** for every message, booking, purchase, deletion, or disclosure of personal data.
+These eight use-case cards apply the same discipline as the business roles: honest integration requirements, minimal access, and **draft → approve → execute** for every message, booking, purchase, deletion, or disclosure of personal data.
 
 ## Recommended order
 
@@ -11,6 +11,7 @@ These seven use-case cards apply the same discipline as the business roles: hone
 5. [Travel Planner](travel-planner.md) — research and itineraries; booking stays with you.
 6. [Home & Family](home-and-family.md) — shared logistics, maintenance, shopping drafts.
 7. [Personal Finance Review](personal-finance-review.md) — read-only organization and summaries, not financial advice.
+8. [Always-On Personal Agent](always-on-personal-agent.md) — host your personal profile on a Mac mini, VPS, cloud computer or Hermes Cloud (new in v2).
 
 ## Universal safety rules
 

@@ -1,0 +1,19 @@
+# Profile distribution manifest — see ../../reference/15-profiles-deep-dive.md
+# Install:  hermes profile install <git-url-or-local-dir> --name <client-role> --alias
+# Update:   hermes profile update <client-role>
+name: role-agent                 # required
+version: 1.0.0
+description: One-line job description of this employee agent
+author: Your Name
+license: MIT
+hermes_requires: ">=0.21.6"
+env_requires:
+  - name: SLACK_BOT_TOKEN
+    description: Bot token for THIS agent's own Slack app (one bot per profile)
+    required: true
+  - name: SLACK_APP_TOKEN
+    description: Socket-mode app token
+    required: true
+  - name: OPENROUTER_API_KEY
+    description: Model provider key (or use ANTHROPIC_API_KEY)
+    required: false

@@ -1,0 +1,4 @@
+{
+  "_comment": "Jobs ship PAUSED on install/update. Prefer creating jobs with `hermes cron` and exporting; don't hand-edit live jobs.json.",
+  "jobs": []
+}

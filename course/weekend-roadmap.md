@@ -76,6 +76,8 @@ load-bearing.
 ---
 
 ## After the weekend (where mastery actually happens)
+- Start **`daily-track.md`** — 30 one-a-day lessons covering profiles, deployment, teams, extension and security.
+- Modules 10–12 are the advanced build blocks (profiles & deployment → teams → security & ops).
 - Run the workflows daily; patch skills when they're wrong; let the agent accumulate memory.
 - Graduate to a Control Room (`module-08-control-room.md`) only when one agent isn't enough.
 - Every time you do something twice, make it a skill. That's the compounding that makes you elite.

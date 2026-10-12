@@ -1,7 +1,7 @@
 ---
 name: hermes-mastery-hub
 description: "Use when the user wants to master Hermes Agent, start the weekend bootcamp, or build Hermes business/personal workflows. Adopt the coach contract in this skill."
-version: "1.0.0"
+version: "2.0.0"
 author: hermes-mastery-hub
 license: MIT
 metadata:
@@ -13,8 +13,8 @@ metadata:
 # Hermes Mastery Hub
 
 This skill turns you (the agent) into a **coach** that walks the user through the Hermes
-Mastery Hub — a verified reference library, a 9-module weekend course, real case studies, a
-13-role business library, and personal use cases.
+Mastery Hub — a verified reference library, a 12-module course plus a 30-lesson daily track, real case
+studies, a 13-role business library, and personal use cases. v2.0.0 targets Hermes v0.21.7 (2026-10-12).
 
 ## COACH CONTRACT (follow this when this skill is active)
 
@@ -45,6 +45,7 @@ Mastery Hub — a verified reference library, a 9-module weekend course, real ca
 
 ## Start of a coaching session — read these in order
 
+0. If the user used hub v1.0 or asks "what's new": `reference/14-whats-new-since-july.md`
 1. `agent-feed/START_HERE.md`
 2. `agent-feed/HERMES_COACH_PROMPT.md` (full contract)
 3. `agent-feed/MASTER_CONTEXT.md` (compressed map)
@@ -52,14 +53,16 @@ Mastery Hub — a verified reference library, a 9-module weekend course, real ca
 
 ## The hub's directory map
 
-- `reference/` — 14 grounded docs (00 ground-truth contract → 13 community discovery/curation)
+- `reference/` — 20 grounded docs (00 ground-truth → 13 community; 14 what's new; 15 profiles; 16 deployment;
+  17 teams; 18 extension map; 19 edge cases / do's & don'ts)
 - `case-studies/` — Mom-n-Pop small business, Control Room multi-agent, Master Class study guide
 - `business-roles/` — 13 role cards (operator, marketer, cold-email, sales, media-buyer,
   copywriter, email-reply, customer-success, finance-ops, research-analyst,
   automation-engineer, founder-chief-of-staff, orchestrator) + README
 - `personal-use-cases/` — life-OS scenarios (personal chief-of-staff, life admin, learning
   coach, personal finance review, travel, home, inbox triage) + README
-- `course/` — 9 modules + `weekend-roadmap.md`
-- `templates/` — SKILL.md, role-card, task-brief, approval-gate, workflow-map, business-intake
+- `course/` — 12 modules + `weekend-roadmap.md` + `daily-track.md` (30 lessons)
+- `templates/` — SKILL.md, role-card, task-brief, approval-gate, workflow-map, business-intake, profile-distribution/
+- `maintenance/` — weekly update-check procedure
 - `examples/` — 8 concrete approval-gated workflow walkthroughs
 - `agent-feed/` — everything the agent reads to run as coach, plus the learning log + assessment

@@ -19,8 +19,8 @@ You understand the four-level model and can articulate when (and whether) to sca
    list agents (slugs), their allowed/forbidden work, and where secrets live (names only).
 3. If you want to try it: use profiles as lightweight specialists first —
    `hermes profile create cmo --clone --description "CMO specialist"` — before containers.
-   Profile names are lowercase alphanumeric; `hermes-cmo` remains the human-facing Control
-   Room slug if you later promote it to a container.
+   Profile names may use hyphens (`hermes-cmo` is valid). For the native team stack (Bot Mode,
+   kanban orchestrator, peers) continue with Module 11.
 4. If you reach Level 3, run one task through the orchestrator loop:
    `../examples/07-control-room-task-routing.md`.
 
