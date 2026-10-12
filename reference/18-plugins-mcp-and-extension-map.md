@@ -70,7 +70,7 @@ hermes plugins enable|disable|list|update|remove|capabilities|check-updates|doct
 ```
 
 - **Catalog:** 570 entries on 2026-10-12 (12 official, the rest community), every entry pinned to an exact commit SHA.
-  Categories: tools, desktop, memory, models, automation, web, platform, voice.
+  Categories: tools, desktop, memory, models, automation, general, web, platform, voice.
 - **Installed ≠ enabled.** Third-party plugins only load if listed in `plugins.enabled`.
 - Capabilities (`tools.override`, `llm.*_override`, `gateway.platform_actions`) need consent at install and again if they grow.
 - Install-time scan returns safe / caution / dangerous; `--force` cannot override dangerous. `removed.yaml` blocks known-bad plugins.
@@ -85,7 +85,7 @@ mcp_servers:
   crm:
     url: https://mcp.example.com/mcp
     auth: oauth
-    lazy: true                       # start on first call
+    lazy: true                       # start on first call (after one live connect has cached the schema)
     trust: untrusted                 # approval for any tool not marked readOnlyHint
     tools:
       include: [search_*, get_*]     # original tool names, globs

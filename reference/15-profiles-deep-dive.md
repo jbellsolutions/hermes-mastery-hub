@@ -35,8 +35,8 @@ A directory only counts as a profile if it holds at least one identity file: `co
 # create
 hermes profile create sales --clone            # copy config, .env, SOUL, skills, memory files, memory-provider config
 hermes profile create sales --clone-from ops   # clone from a specific profile
-hermes profile create sales --clone-all        # everything except history and cron
-hermes profile create sales --clone-channels   # ALSO copy bot tokens/allowlists (collision risk)
+hermes profile create sales --clone-all        # everything except history, cron and bot channels
+hermes profile create sales --clone --clone-channels   # ALSO copy bot tokens/allowlists (collision risk; needs a clone flag)
 hermes profile create sales --description "Inbound sales SDR"
 
 # use
@@ -75,8 +75,8 @@ retired). This replaces the old "one gateway service per profile" pattern.
 - `hermes -p <name> gateway stop|start` parks/unparks that profile inside the host.
 - HTTP-inbound platforms share one listener under `/p/<profile>/…` (e.g. `/p/coder/webhooks/<route>`). Secondary
   profiles must not enable their own `api_server`/`webhook`.
-- **One shared bot, many profiles:** `gateway.profile_routes` routes by `user_id` > `thread_id` > `chat_id` > `guild_id`
-  (most specific wins). Useful when one Slack/Discord bot fronts a whole team.
+- **One shared bot, many profiles:** `gateway.profile_routes` matches on `user_id`, `thread_id`, `chat_id`, `guild_id`.
+  Matches are scored by adding weights (user 16, thread 8, chat 4, guild 2); the highest score wins. Useful when one Slack/Discord bot fronts a whole team.
 - Named-profile `gateway install/start/run` refuses (exit 78) unless `gateway.standalone: true` (temporary shim) or
   `--force` (fleets split across UNIX users).
 - Service names: launchd `ai.hermes.gateway.plist`, systemd `hermes-gateway.service` (host); Docker uses s6 slots.
@@ -138,7 +138,7 @@ filtered by filename only). Use it to move *your* agent. Use a distribution to h
 ## Pitfalls (from the docs)
 
 1. **Never run two agent processes on one profile** — memory writes compound each other.
-2. `--clone` does **not** copy bot channels. `--clone-channels` does, and risks token collisions (`profile list` warns).
+2. `--clone` does **not** copy bot channels. Adding `--clone-channels` to a clone flag does, and risks token collisions (`profile list` warns).
 3. OAuth refresh tokens are single-use, so clones share the root login. Give a profile its own: `hermes -p x auth add anthropic`.
 4. `terminal.cwd: "."` means the *launch* directory, not the profile directory. Set it explicitly.
 5. Deleting the sticky profile's folder by hand blocks commands until `hermes profile use default`.

@@ -21,7 +21,8 @@ source file of each item) plus operator experience. Experience-based items are m
 12. **Use Tool Search + MCP `include` filters** once you have more than a few servers.
 13. **Template with profile distributions**, test-install from a local folder before pushing.
 14. **Use a dedicated, low-privilege mailbox** for an agent that does email, and have it draft before sending.
-15. **Use `computer_use.permission_mode: bounded`** for recurring GUI automation; take over via Bot Screen for 2FA/CAPTCHA/payments.
+15. **Use `computer_use.permission_mode: bounded`** with a `computer_use.capability_manifest` for recurring GUI automation
+    (anything outside the manifest fails closed); take over via Bot Screen for 2FA/CAPTCHA/payments.
 
 ## Don't
 

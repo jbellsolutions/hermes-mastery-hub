@@ -23,7 +23,7 @@ Defaults confirmed in `hermes_cli/config_defaults.py`. Items marked INFERRED are
 - Async by default: the call returns a handle; the result lands as a new turn.
 - Defaults: `max_concurrent_children: 10`, `max_spawn_depth: 1` (flat), `max_iterations: 250`,
   `subagent_auto_approve: false`, `worktree_isolation: false`, `max_summary_chars: 24000`.
-- Children inherit the parent's tools but **cannot** use `clarify`, `memory`, `send_message`, `cronjob`, or delegate
+- Children inherit the parent's tools but **cannot** use `clarify`, `memory`, `send_message`, `cronjob`, `start_chat`, or delegate
   further unless given `role="orchestrator"`.
 - Control: `delegate_task` actions `list` / `steer` / `stop`; `/agents` (Ctrl+T); `output_schema` for JSON results.
 - Pin a cheap worker model globally with `delegation.model` / `delegation.provider`.
@@ -35,7 +35,7 @@ Defaults confirmed in `hermes_cli/config_defaults.py`. Items marked INFERRED are
 hermes kanban init
 hermes kanban create "Draft 3 cold-email variants for gyms" --assignee copy --skill cold-email
 hermes kanban create "QA the variants" --assignee qa --model <cheap-model>
-hermes kanban link <child> <parent>
+hermes kanban link <parent> <child>   # parent → child dependency
 hermes kanban watch | tail | runs | diagnostics
 hermes kanban swarm ...            # workers → verifier → synthesizer
 /kanban ...                        # from any chat
@@ -47,7 +47,8 @@ hermes kanban swarm ...            # workers → verifier → synthesizer
 - Orchestrator profile: enable the `kanban` toolset (`hermes -p boss tools enable kanban --platform slack`). Orchestrator
   guidance is injected automatically. It reads each employee's `profile describe` text to route work.
 - Reporting back: subscriptions with `--delivery-mode notify+wake` wake the orchestrator for a real turn when a card
-  completes, blocks, or requests review. `notify-subscribe … --chat-type group` posts events to a team group.
+  completes, blocks, or requests review. `hermes kanban notify-subscribe` can also target a team group chat (set the
+  destination with its notify-target arguments).
 - Limits: `max_in_progress`, `max_in_progress_per_profile`, `failure_limit` (2), `dispatch_stale_timeout_seconds` (4h).
 - Workers can't see sibling cards — **stamp shared decisions into every card body**.
 - Scratch workspaces are deleted on completion unless files are declared as `artifacts`.
