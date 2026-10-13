@@ -6,17 +6,17 @@ thing you actually do on a real agent. Lessons are ordered; skip one only if you
 Each lesson = **Learn** (5 min, the reference section) → **Do** (≤20 min) → **Check** (how you know it worked).
 A scheduled task can deliver one lesson per day; log results in `../agent-feed/DAILY_LEARNING_LOG.md`.
 
-## Week 1 — Foundations, refreshed
+## Week 1 — Foundations
 
 | # | Lesson | Do | Check |
 |---|---|---|---|
-| 1 | What changed since July | Read ref 14; run `hermes --version`, `hermes config check` | You can name 5 wrong-now defaults |
-| 2 | Update safely | `hermes update --check`, `--plan`, set `pre_update_backup: full` | Update receipt exists |
-| 3 | Config vs secrets vs SOUL | Read `which-file-does-what`; move any key out of `config.yaml` | `grep -i key config.yaml` is clean |
-| 4 | Approvals | Set `smart` vs `manual`; add 3 `approvals.deny` rules | A denied command fails in YOLO |
-| 5 | Skills, the modern way | `/learn` a skill from one of your SOPs; chain two skills | It triggers from natural language |
-| 6 | Shared skills | Set `skills.external_dirs` to one shared folder on two profiles | Both profiles list the same skill |
-| 7 | Curator | `hermes curator status`, `adopt`, `pin` your keepers | You know what will archive next |
+| 1 | Get every agent onto current Hermes | `hermes update --plan`, `--backup`, update, verify each box | `hermes --version` matches on every machine; no restart warnings |
+| 2 | Config vs secrets vs SOUL | Read `which-file-does-what`; move any key out of `config.yaml` | `grep -i key config.yaml` is clean |
+| 3 | Approvals | Set `smart` vs `manual`; add 3 `approvals.deny` rules | A denied command fails in YOLO |
+| 4 | Skills, the modern way | `/learn` a skill from one of your SOPs; chain two skills | It triggers from natural language |
+| 5 | Shared skills | Set `skills.external_dirs` to one shared folder on two profiles | Both profiles list the same skill |
+| 6 | Curator | `hermes curator status`, `adopt`, `pin` your keepers | You know what will archive next |
+| 7 | Memory & memory providers | Built-in vs Honcho; turn on `memory.write_approval` | You can say what each profile remembers and why |
 
 ## Week 2 — Profiles & deployment
 
